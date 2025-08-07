@@ -1,5 +1,5 @@
 :root {
-  /* Style Guide Colors */
+  /* Style Colors */
   --Neutral-900: #163a34;
   --Neutral-600: #395852;
   --Neutral-300: #d0dcd9;
@@ -47,4 +47,136 @@
   --radius-20: 1.25rem;
   --radius-24: 1.5rem;
   --radius-full: 999px;
+}
+
+/* Global Styling */
+
+@font-face {
+  font-family: "Nunito-Variable";
+  src: url(assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\opsz\wdth\wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Neutral-100);
+  font-family: "Nunito-Variable", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Global Home Styling */
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.hamburger-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: var(--radius-4);
+  border: none;
+}
+
+.nav-links-wrapper,
+.browse-recipe-btn {
+  display: none;
+}
+
+.browse-recipe-btn {
+  justify-self: end;
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 47.99em) {
+  .nav-wrapper {
+    margin: 0 var(--spacing-200);
+    height: 4.5rem;
+  }
+
+  .healthy-recipe-logo {
+    width: 242px;
+    height: 32px;
+  }
+
+  .nav-links-wrapper,
+  .browse-recipe-btn {
+    display: block;
+  }
+}
+
+/* Tablet breakpoint */
+@media screen and (min-width: 48em) {
+  .nav-wrapper {
+    margin: 0rem var(--spacing-400);
+    height: 4.5rem;
+  }
+
+  .healthy-recipe-logo {
+    width: 243px;
+    height: 40px;
+  }
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 64em) {
+  .hamburger-icon {
+    display: none;
+  }
+
+  .nav-wrapper {
+    display: block;
+  }
+
+  .nav-links-wrapper,
+  .browse-recipe-btn {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 5.75rem;
+    width: 100%;
+    margin: auto;
+    max-width: 82.5rem;
+    padding: 0 3.75rem;
+  }
+
+  .nav-links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
 }
