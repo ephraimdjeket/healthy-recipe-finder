@@ -6,23 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Healthy Recipe Finder - Home</title>
+  <script src="hamburger.js" defer></script>
 </head>
 
 <body>
-  <nav class="nav-wrapper">
-    <img class="healthy-recipe-logo" src="assets/images/logo.svg" alt="Healthy Recipe Finder logo">
+  <header>
+    <nav class="nav-wrapper">
+      <img class="healthy-recipe-logo" src="assets/images/logo.svg" alt="Healthy Recipe Finder logo">
 
-    <div class="nav-links-wrapper">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Recipes</a></li>
+      <div id="nav-links-wrapper">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Recipes</a></li>
+        </ul>
+        <a id="browse-recipe-btn" href="#">Browse recipes</a>
+      </div>
+
+      <button id="hamburger-icon"><img src="assets/images/icon-hamburger-menu.svg" alt="Hamburger icon"></button>
+    </nav>
+    <span class="nav-bottom-border"></span>
+  </header>
+  <main>
+    <section class="hero-container">
+      <h1><span class="orange-background">Healthy meals</span>, zero fuss</h1>
+      <p>Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.</p>
+      <button>Start Exploring</button>
+      <img src="assets/images/image-home-hero-small.webp" alt="Woman cooking in the kitchen">
+    </section>
+    <section class="what-youll-get">
+      <h2>What you’ll get</h2>
+      <ul>
+        <li>
+          <img src="assets/images/icon-whole-food-recipes.svg" alt="carrot icon">
+          <h2>Whole-food recipes</h2>
+          <p>Each dish uses everyday, unprocessed ingredients.</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-minimum-fuss.svg" alt="minimum fuss icon">
+          <h2>Minimum fuss</h2>
+          <p>All recipes are designed to make eating healthy quick and easy.</p>
+        </li>
+        <li>
+          <img src="assets/images/icon-search-in-seconds.svg" alt="search glass icon">
+          <h2>Search in seconds</h2>
+          <p>Filter by name or ingredient and jump straight to the recipe you need.</p>
+        </li>
       </ul>
-      <a class="browse-recipe-btn" href="#">Browse recipes</a>
-    </div>
-
-    <button class="hamburger-icon"><img src="assets/images/icon-hamburger-menu.svg" alt="Hamburger icon"></button>
-  </nav>
+    </section>
+    <section class="built-for-real-life">
+      <h2>Built for real life</h2>
+      <p>Cooking shouldn’t be complicated. These recipes come in under <span>30 minutes</span> of active time, fit busy
+        schedules,
+        and taste good enough to repeat. </p>
+      <p>Whether you’re new to the kitchen or just need fresh ideas, we’ve got you covered.</p>
+      <img src="assets/images/image-home-real-life-small.webp" alt="knife cutting lettus">
+    </section>
+    <section class="ready-to-cook">
+      <h2>Ready to cook smarter?</h2>
+      <p>Hit the button, pick a recipe, and get dinner on the table—fast.</p>
+      <a id="browse-recipe-2nd-btn" href="#">Browse recipes</a>
+    </section>
+    <footer>
+      <div class="footer-icons-wrapper">
+        <img src="assets/images/icon-instagram.svg" alt="instagram svg"><img src="assets/images/icon-bluesky.svg"
+          alt="bluesky svg"><img src="assets/images/icon-tiktok.svg" alt="tiktok svg">
+      </div>
+      <p>Made with ❤️ and 🥑</p>
+      <p>Ephraim Djeket © 2025</p>
+    </footer>
+  </main>
 </body>
 
 </html>
