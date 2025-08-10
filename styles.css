@@ -74,6 +74,11 @@ img {
   max-width: 100%;
 }
 
+.active {
+  border-bottom: 3px solid var(--Orage-500);
+  border-radius: var(--radius-2);
+}
+
 /* Global Home Styling */
 
 .nav-wrapper {
@@ -197,8 +202,8 @@ p {
 }
 
 .hero-media {
-  position: relative; /* anchor for ::before */
-  display: inline-block; /* shrink-wrap to image */
+  position: relative;
+  display: inline-block;
 }
 
 /* Hero container */
@@ -228,6 +233,21 @@ p {
   border-radius: var(--radius-10);
   background-color: var(--Neutral-900);
   margin-bottom: var(--spacing-500);
+}
+
+.hero-media > img {
+  margin: auto;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -220px;
+  width: 100%;
+  height: 100%;
+  background: url(assets/images/pattern-squiggle-1.svg) no-repeat center /
+    contain;
+  z-index: -1;
 }
 
 /* What you'll get */
@@ -328,16 +348,6 @@ footer > p {
     padding: 0rem 0.928rem;
   }
 
-  .hero-media::before {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    height: 100%;
-    background: url(assets/images/pattern-squiggle-1.svg) no-repeat center /
-      contain;
-    z-index: -1;
-  }
   /* Nav bar*/
   .nav-wrapper {
     margin: 0 var(--spacing-200);
@@ -385,6 +395,27 @@ footer > p {
     width: 243px;
     height: 40px;
   }
+
+  /* Hero container */
+  .hero-title,
+  .hero-p,
+  .hero-btn,
+  .spacing-wrapper {
+    margin: 0rem 2rem;
+  }
+
+  .hero-media {
+    margin: auto;
+  }
+
+  .hero-media > img {
+    margin: auto;
+    border-radius: var(--radius-12);
+  }
+
+  .orange-background::before {
+    width: 230px;
+  }
 }
 
 /* Desktop breakpoint */
@@ -404,7 +435,6 @@ footer > p {
   }
 
   .nav-wrapper {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5.75rem;
@@ -437,5 +467,26 @@ footer > p {
   /* Hero container */
   .hero-container > button {
     justify-self: start;
+  }
+
+  .hero-container {
+    align-items: center;
+  }
+
+  .hero-container > p {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .hero-media {
+    max-width: 1192px;
+  }
+
+  body::before {
+    bottom: -90px;
+  }
+
+  .orange-background::before {
+    width: 260px;
   }
 }
