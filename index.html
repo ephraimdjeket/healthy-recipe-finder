@@ -16,7 +16,7 @@
 
       <div id="nav-links-wrapper">
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
+          <li class="active"><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Recipes</a></li>
         </ul>
@@ -34,7 +34,13 @@
         guesswork.</p>
       <button class="hero-btn">Start Exploring</button>
       <div class="hero-media">
-        <img src="assets/images/image-home-hero-small.webp" alt="Woman cooking in the kitchen">
+        <picture class="hero-media">
+          <source media="(min-width: 64em)" srcset="assets/images/image-home-hero-large.webp" type="image/webp" />
+          <source media="(min-width: 63.99em)" srcset="assets/images/image-home-hero-medium.webp" type="image/webp" />
+          <img src="assets/images/image-home-hero-small.webp" alt="Woman cooking in the kitchen" loading="eager" />
+        </picture>
+
+        <!-- <img src="assets/images/image-home-hero-small.webp" alt="Woman cooking in the kitchen"> -->
       </div>
     </section>
     <section class="spacing-wrapper">
