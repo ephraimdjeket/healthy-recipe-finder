@@ -129,11 +129,12 @@ img {
   border-radius: var(--radius-8);
   margin-bottom: 12px;
 }
+
 .nav-links > li {
-  width: 50px;
+  width: 100%;
 }
 
-.nav-links > li:hover {
+.nav-links > li > a:hover {
   border-bottom: 3px solid var(--Orange-500);
   border-radius: var(--radius-2);
 }
