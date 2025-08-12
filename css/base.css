@@ -1,0 +1,356 @@
+/* Global CSS Variables */
+:root {
+  /* Style Colors */
+  --Neutral-900: #163a34;
+  --Neutral-600: #395852;
+  --Neutral-300: #d0dcd9;
+  --Neutral-200: #e0e6e3;
+  --Neutral-100: #f6f5f1;
+  --Neutral-0: #ffffff;
+  --Orange-500: #fe9f6b;
+  --Teal-500: #49ac9b;
+  --Indigo-500: #697ddb;
+
+  /* Font Sizes*/
+  --Text-present-1: clamp(3.25rem, 2.8099rem + 1.8779vw, 4.5rem);
+  --Text-present-2: clamp(2.5rem, 2.3239rem + 0.7512vw, 3rem);
+  --Text-present-3: 2rem;
+  --Text-present-4: 1.5rem;
+  --Text-present-5: 1.25rem;
+
+  /*Spacing*/
+  --spacing-025: 0.125rem;
+  --spacing-050: 0.25rem;
+  --spacing-075: 0.375rem;
+  --spacing-100: 0.5rem;
+  --spacing-125: 0.625rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-250: 1.25rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-1000: 5rem;
+  --spacing-1200: 6rem;
+  --spacing-1400: 7rem;
+  --spacing-1600: 8rem;
+  --spacing-1800: 8.75rem;
+
+  /*Radius*/
+  --radius-4: 0.25rem;
+  --radius-6: 0.375rem;
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-16: 1rem;
+  --radius-20: 1.25rem;
+  --radius-24: 1.5rem;
+  --radius-full: 999px;
+}
+
+/* Global Styling */
+
+@font-face {
+  font-family: "Nunito-Variable";
+  src: url(../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--Neutral-100);
+  font-family: "Nunito-Variable", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.active {
+  border-bottom: 3px solid var(--Orange-500);
+  border-radius: var(--radius-2);
+}
+
+/* Global Home Styling */
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.nav-bottom-border {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--Neutral-300);
+}
+
+#hamburger-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: var(--radius-4);
+  border: none;
+}
+
+#nav-links-wrapper {
+  top: 74px;
+  width: 100%;
+  position: absolute;
+  padding: var(--spacing-100);
+  color: var(--Neutral-900);
+  font-size: 18px;
+  background-color: var(--Neutral-0);
+  border-radius: var(--radius-8);
+  margin-bottom: 12px;
+}
+.nav-links > li {
+  width: 50px;
+}
+
+.nav-links > li:hover {
+  border-bottom: 3px solid var(--Orange-500);
+  border-radius: var(--radius-2);
+}
+
+#nav-links-wrapper > li {
+  margin-left: var(--spacing-100);
+}
+
+#nav-links-wrapper > li,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#nav-links-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#nav-links-wrapper.is-open {
+  display: block;
+  max-height: 500px;
+  opacity: 1;
+}
+
+#browse-recipe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  height: 52px;
+  border-radius: var(--radius-10);
+  background-color: var(--Neutral-900);
+  color: var(--Neutral-0);
+  font-weight: 600;
+}
+
+/* Ready to cook smarter */
+.ready-to-cook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--Neutral-200);
+  border-radius: var(--radius-16);
+  height: 353px;
+  width: 100%;
+  margin: auto;
+  padding: 0rem 1rem;
+  margin-top: var(--spacing-800);
+  position: relative;
+  overflow: hidden;
+}
+
+.ready-to-cook > p {
+  margin-top: var(--spacing-150);
+  margin-bottom: var(--spacing-400);
+}
+
+.fork-icon,
+.knife-icon {
+  display: block;
+  position: absolute;
+}
+
+#browse-recipe-2nd-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 12px;
+  height: 52px;
+  border-radius: var(--radius-10);
+  background-color: var(--Neutral-900);
+  color: var(--Neutral-0);
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 1px 1.5rem;
+  border: none;
+}
+
+/* Footer */
+footer {
+  margin-bottom: 1.25rem;
+}
+
+.footer-icons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+footer > p {
+  display: flex;
+  justify-content: center;
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 47.99em) {
+  /* Nav bar*/
+  .nav-wrapper {
+    margin: 0 var(--spacing-200);
+    height: 4.5rem;
+  }
+
+  .healthy-recipe-logo {
+    width: 242px;
+    height: 32px;
+  }
+
+  /* Ready to cook smarter? */
+
+  .fork-icon,
+  .knife-icon {
+    display: none;
+  }
+}
+
+/* Tablet breakpoint */
+@media screen and (min-width: 48em) and (max-width: 67.99em) {
+  .nav-wrapper {
+    margin: 0rem var(--spacing-400);
+    height: 4.5rem;
+  }
+
+  .healthy-recipe-logo {
+    width: 243px;
+    height: 40px;
+  }
+
+  /* Ready to cook smarter? */
+
+  .fork-icon,
+  .knife-icon {
+    width: 179px;
+  }
+
+  .fork-icon {
+    bottom: -40px;
+    left: -30px;
+  }
+
+  .knife-icon {
+    top: -40px;
+    right: -60px;
+    padding-right: 20px;
+  }
+}
+
+/* Desktop breakpoint */
+@media screen and (min-width: 64em) {
+  #hamburger-icon {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .nav-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    height: 5.75rem;
+    width: 100%;
+    margin: auto;
+    max-width: 82.5rem;
+    padding: 0 3.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  #nav-links-wrapper {
+    display: flex;
+    top: 0;
+    z-index: 999;
+    justify-content: space-between;
+    position: static;
+    background-color: transparent;
+    width: 58%;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  #browse-recipe-btn {
+    width: 167px;
+    margin-top: 0px;
+  }
+
+  /* Ready to cook smarter? */
+
+  .fork-icon,
+  .knife-icon {
+    width: 314px;
+  }
+
+  .fork-icon {
+    bottom: -50px;
+    left: -30px;
+  }
+
+  .knife-icon {
+    top: 50px;
+    right: -60px;
+    padding-right: 20px;
+  }
+}
