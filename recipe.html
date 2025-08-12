@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Recipe Finder - Recipe</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/recipe.css">
+  <script src="/js/hamburger.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-wrapper">
+      <img class="healthy-recipe-logo" src="assets/images/logo.svg" alt="Healthy Recipe Finder logo">
+
+      <div id="nav-links-wrapper">
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="/recipe.html">Recipes</a></li>
+        </ul>
+        <a id="browse-recipe-btn" href="#">Browse recipes</a>
+      </div>
+
+      <button id="hamburger-icon"><img src="assets/images/icon-hamburger-menu.svg" alt="Hamburger icon"></button>
+    </nav>
+    <span class="nav-bottom-border"></span>
+  </header>
+  <main>
+    <section class="explore-our-simple-recipe">
+      <h1>Explore our simple, healthy recipes</h1>
+      <p>Discover eight quick, whole-food dishes that fit real-life schedules and taste amazing. Use the search bar to
+        find a recipe by name or ingredient, or simply scroll the list and let something delicious catch your eye.</p>
+    </section>
+    <section class="option-wrapper">
+      <div class="select-time-option-wrapper">
+        <select id="max-prep-time" aria-label="Max prep time selection">
+          <option value="#">Max Prep Time</option>
+        </select>
+
+        <select id="max-cook-time" aria-label="Max cook time selection">
+          <option value="#">Max Cook Time</option>
+        </select>
+      </div>
+      <input type="search" id="search-recipes" placeholder="Search by name or ingredient…" aria-label="Search">
+    </section>
+    <section class="healthy-recipes">
+      <!-- 1 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/mediterranean-chickpea-salad-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/mediterranean-chickpea-salad-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/mediterranean-chickpea-salad-small.webp" alt="Mediterranean chickpea salad">
+        </picture>
+        <h2>Mediterranean Chickpea Salad</h2>
+        <p>A refreshing, protein-packed salad tossed in a lemon-olive oil dressing.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 2</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 10 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 0 min</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 2 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/avocado-tomato-wholegrain-toast-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/avocado-tomato-wholegrain-toast-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/avocado-tomato-wholegrain-toast-small.webp" alt="Avocado and tomato wholegrain toast">
+        </picture>
+        <h2>Avocado &amp; Tomato Wholegrain Toast</h2>
+        <p>Creamy avocado spread over toasted wholegrain bread, topped with juicy tomatoes.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 1</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 5 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 5 min</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 3 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/salmon-asparagus-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/salmon-asparagus-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/salmon-asparagus-small.webp" alt="Salmon with asparagus on a pan">
+        </picture>
+        <h2>One-Pan Lemon Garlic Salmon with...</h2>
+        <p>A 15-minute weeknight dinner of flaky salmon and tender asparagus.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 2</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 5 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 12 min</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 4 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/quinoa-veggie-bowl-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/quinoa-veggie-bowl-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/quinoa-veggie-bowl-small.webp" alt="Quinoa veggie power bowl">
+        </picture>
+        <h2>Quinoa Veggie Power Bowl</h2>
+        <p>A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 2</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 10 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 15 mins</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 5 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/sweet-potato-tacos-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/sweet-potato-tacos-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/sweet-potato-tacos-small.webp" alt="Sweet potato black bean tacos">
+        </picture>
+        <h2>Sweet Potato Black Bean Tacos</h2>
+        <p>Smoky roasted sweet potatoes and black beans tucked into warm tortillas.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 3</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 10 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 15 mins</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 6 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/greek-yogurt-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/greek-yogurt-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/greek-yogurt-small.webp" alt="Greek yogurt berry parfait in a glass">
+        </picture>
+        <h2>Greek Yogurt Berry Parfait</h2>
+        <p>Layers of creamy yogurt, fresh berries and crunchy oats for a high-protein snack.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 1</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 5 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 0 min</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 7 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/lentil-soup-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/lentil-soup-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/lentil-soup-small.webp" alt="Lentil and spinach soup">
+        </picture>
+        <h2>Lentil &amp; Spinach Soup</h2>
+        <p>A hearty 30-minute soup rich in plant protein and iron.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 4</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 10 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 15 mins</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+
+      <!-- 8 -->
+      <div class="recipe-card">
+        <picture>
+          <source srcset="assets/images/banana-pancakes-large.webp" media="(min-width: 48em)" />
+          <source srcset="assets/images/banana-pancakes-small.webp" media="(max-width: 47.99em)" />
+          <img src="assets/images/banana-pancakes-small.webp" alt="Banana oat pancakes with berries">
+        </picture>
+        <h2>Banana Oat Pancakes</h2>
+        <p>Flour-free pancakes sweetened naturally with ripe bananas.</p>
+        <div class="recipe-card-icons">
+          <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 2</span>
+          <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 5 mins</span>
+        </div>
+        <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 10 mins</span>
+        <button class="view-recipe-btn">View Recipe</button>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <div class="footer-icons-wrapper">
+      <img src="assets/images/icon-instagram.svg" alt="instagram svg"><img src="assets/images/icon-bluesky.svg"
+        alt="bluesky svg"><img src="assets/images/icon-tiktok.svg" alt="tiktok svg">
+    </div>
+    <p>Made with ❤️ and 🥑</p>
+    <p>Ephraim Djeket © 2025</p>
+  </footer>
+
+</body>
+
+</html>
