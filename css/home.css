@@ -173,7 +173,7 @@ body::before {
 /* Tablet breakpoint */
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
   body::before {
-    bottom: -90px;
+    bottom: -180px;
   }
 
   .nav-wrapper {
@@ -226,7 +226,7 @@ body::before {
 /* Desktop breakpoint */
 @media screen and (min-width: 64em) {
   body::before {
-    bottom: -90px;
+    bottom: -140px;
   }
   /* Hero container */
   .hero-container > a {
