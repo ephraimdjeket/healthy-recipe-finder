@@ -13,7 +13,8 @@
 <body>
   <header>
     <nav class="nav-wrapper">
-      <img class="healthy-recipe-logo" src="assets/images/logo.svg" alt="Healthy Recipe Finder logo">
+      <a href="/home.html"><img class="healthy-recipe-logo" src="assets/images/logo.svg"
+          alt="Healthy Recipe Finder logo"></a>
 
       <div id="nav-links-wrapper">
         <ul class="nav-links">
@@ -37,7 +38,7 @@
       <div class="hero-media">
         <picture class="hero-media">
           <source media="(min-width: 48em)" srcset="assets/images/image-home-hero-large.webp" type="image/webp" />
-          <source media="(min-width: 47.99em)" srcset="assets/images/image-home-hero-medium.webp" type="image/webp" />
+          <source media="(max-width: 47.99em)" srcset="assets/images/image-home-hero-small.webp" type="image/webp" />
           <img src="assets/images/image-home-hero-small.webp" alt="Woman cooking in the kitchen" loading="eager" />
         </picture>
       </div>
@@ -73,8 +74,12 @@
             and taste good enough to repeat. </p>
           <p>Whether you’re new to the kitchen or just need fresh ideas, we’ve got you covered.</p>
         </div>
-        <img class="knife-cutting-lettus" src="assets/images/image-home-real-life-small.webp"
-          alt="knife cutting lettus">
+        <picture>
+          <source media="(min-width: 48em)" srcset="assets/images/image-home-real-life-large.webp">
+          <source media="(max-width: 47.99em)" srcset="assets/images/image-home-real-life-small.webp">
+          <img class="knife-cutting-lettus" src="assets/images/image-home-real-life-small.webp"
+            alt="knife cutting lettus">
+        </picture>
       </section>
       <section class="ready-to-cook">
         <img class="fork-icon" src="assets/images/pattern-fork.svg" alt="fork icon">
