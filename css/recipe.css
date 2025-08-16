@@ -3,15 +3,12 @@ main {
   margin: auto;
 }
 
-.explore-our-simple-recipe > h1 {
-  font-size: var(--Text-present-2);
-  color: var(--Neutral-900);
+.explore-our-simple-recipe > h2 {
   font-weight: 800;
   text-align: center;
 }
 
 .explore-our-simple-recipe > p {
-  color: var(--Neutral-600);
   margin: auto;
   text-align: center;
   max-width: 724px;

@@ -79,6 +79,25 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2 {
+  font-weight: 800;
+  color: var(--Neutral-900);
+}
+
+h1 {
+  font-size: var(--Text-present-1);
+}
+
+h2 {
+  font-size: var(--Text-present-2);
+}
+
+p {
+  color: var(--Neutral-600);
+  font-size: 1.25rem;
+}
+
 .active {
   border-bottom: 3px solid var(--Orange-500);
   border-radius: var(--radius-2);
