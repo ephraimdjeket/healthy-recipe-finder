@@ -79,6 +79,14 @@ img {
   max-width: 100%;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 999;
+  background-color: var(--Neutral-100);
+}
+
 h1,
 h2 {
   font-weight: 800;
@@ -138,7 +146,7 @@ p {
 }
 
 #nav-links-wrapper {
-  top: 74px;
+  top: 20px;
   width: 100%;
   position: absolute;
   padding: var(--spacing-100);
