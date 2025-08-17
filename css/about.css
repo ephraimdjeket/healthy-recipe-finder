@@ -14,7 +14,7 @@ picture img {
   padding-bottom: var(--spacing-800);
 }
 
-.our-mission-text-wrapper > h1 {
+.our-mission-text-wrapper > h2 {
   margin: var(--spacing-300) 0rem;
   font-weight: 800;
 }
@@ -33,6 +33,8 @@ picture img {
 }
 
 .why-we-exist {
+  display: flex;
+  justify-content: space-between;
   padding: var(--spacing-600) 0rem;
 }
 
@@ -44,7 +46,6 @@ picture img {
 li > h3 {
   font-size: var(--Text-present-4);
   color: var(--Neutral-900);
-  margin-bottom: var(--spacing-150);
 }
 
 .bullet-point-container {
@@ -53,12 +54,28 @@ li > h3 {
 
 .bullet-point-container > p {
   padding-left: 50px;
+  margin-top: var(--spacing-150);
 }
 
 .bullet-point-container > li {
   display: flex;
-  align-items: center;
   gap: var(--spacing-250);
+}
+
+.beyond-the-plate {
+  padding: var(--spacing-600) 0rem;
+}
+
+.beyond-the-plate-content > p {
+  margin-top: var(--spacing-200);
+  margin-bottom: var(--spacing-150);
+}
+
+.beyond-the-plate-ul {
+  padding-left: var(--spacing-400);
+  margin-bottom: var(--spacing-300);
+  font-size: 1.25rem;
+  color: var(--Neutral-600);
 }
 
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
@@ -66,4 +83,25 @@ li > h3 {
 
 /* Desktop breakpoint */
 @media screen and (min-width: 64em) {
+  .why-we-exist > ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 756px;
+  }
+
+  .our-food-philosophy > ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 756px;
+  }
+  .our-mission {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-800);
+  }
+
+  .our-food-philosophy {
+    display: flex;
+    gap: var(--spacing-800);
+  }
 }
