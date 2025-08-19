@@ -15,7 +15,20 @@ main {
 }
 
 .healthy-recipes {
+  display: grid;
+  gap: var(--spacing-400);
+  align-items: stretch;
   margin-top: var(--spacing-300);
+}
+
+.option-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.select-time-option-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 .recipe-card,
@@ -26,7 +39,10 @@ picture img {
 .recipe-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 746px;
+  height: 100%;
   gap: 16px;
   background-color: var(--Neutral-0);
   padding: var(--spacing-100);
@@ -48,7 +64,7 @@ picture img {
 
 .view-recipe-btn {
   width: 100%;
-  max-width: 360px;
+  margin-top: auto;
   border: none;
   color: white;
   background-color: var(--Neutral-900);
@@ -63,17 +79,76 @@ picture img {
   gap: 1rem;
 }
 
-@media screen and (min-width: 64em) {
+.option-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Mobile breakpoint*/
+@media screen and (max-width: 47.99em) {
+  .option-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .select-time-option-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .healthy-recipes {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-card picture img {
+    width: 100%;
+  }
+
+  .select-time-option-wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/* Tablet breakpoint */
+@media screen and (min-width: 48em) and (max-width: 75.99em) {
+  .option-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .healthy-recipes {
+    display: grid;
+    justify-items: center;
+  }
+
+  .recipe-card {
+    max-width: 746px;
+  }
+}
+
+/* Desktop breakpoint*/
+@media screen and (min-width: 76em) {
   .explore-our-simple-recipe {
     margin-top: var(--spacing-1000);
     margin-bottom: var(--spacing-800);
   }
+
   .healthy-recipes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: var(--spacing-400);
+    align-items: stretch;
   }
+
+  .recipe-card-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   picture img {
     max-width: 360px;
   }
@@ -84,10 +159,5 @@ picture img {
 
   .recipe-card > p {
     margin-top: -6px;
-  }
-
-  .option-wrapper {
-    display: flex;
-    justify-content: space-between;
   }
 }
