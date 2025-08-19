@@ -75,6 +75,10 @@ body::before {
   list-style: none;
 }
 
+.what-youll-get-icon {
+  width: 60px;
+}
+
 .what-youll-get > ul > li > img {
   background-color: var(--Neutral-0);
   border-radius: var(--radius-12);
@@ -246,9 +250,20 @@ body::before {
     margin-top: var(--spacing-1200);
   }
 
+  .what-youll-get > ul > li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .what-youll-get > ul > li > h2 {
+    margin-top: var(--spacing-300);
+    margin-bottom: var(--spacing-150);
+  }
+
   .what-youll-get > ul {
     display: flex;
     justify-content: space-around;
+    gap: 32px;
     align-items: center;
     margin-top: var(--spacing-600);
     padding-bottom: var(--spacing-1200);
