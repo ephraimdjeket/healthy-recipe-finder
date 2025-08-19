@@ -34,6 +34,7 @@ picture img {
 
 .why-we-exist {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: var(--spacing-600) 0rem;
 }
@@ -83,6 +84,10 @@ li > h3 {
 
 /* Desktop breakpoint */
 @media screen and (min-width: 64em) {
+  .why-we-exist {
+    flex-direction: row;
+  }
+
   .why-we-exist > ul {
     display: flex;
     flex-direction: column;
@@ -103,5 +108,24 @@ li > h3 {
   .our-food-philosophy {
     display: flex;
     gap: var(--spacing-800);
+  }
+
+  .beyond-the-plate {
+    display: flex;
+    gap: var(--spacing-800);
+  }
+
+  .beyond-the-plate-content {
+    max-width: 390px;
+  }
+
+  .beyond-the-plate-ul {
+    display: block;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .extra-text {
+    display: none;
   }
 }
