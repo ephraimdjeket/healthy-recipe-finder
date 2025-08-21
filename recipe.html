@@ -4,10 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy Recipe Finder - Recipe</title>
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/recipe.css">
   <script src="/js/hamburger.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <title>Healthy Recipe Finder - Recipes</title>
 </head>
 
 <body>
@@ -45,7 +49,14 @@
           <option value="#">Max Cook Time</option>
         </select>
       </div>
-      <input type="search" id="search-recipes" placeholder="Search by name or ingredient…" aria-label="Search">
+      <label class="search-wrap">
+        <input class="search-recipes" type="search" id="search-recipes" placeholder="Search by name or ingredient…"
+          aria-label="Search">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+        </svg>
+      </label>
     </section>
     <section class="healthy-recipes">
       <!-- 1 -->
