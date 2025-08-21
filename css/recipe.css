@@ -21,6 +21,36 @@ main {
   margin-top: var(--spacing-300);
 }
 
+select {
+  cursor: pointer;
+}
+
+select,
+.search-recipes {
+  border: none;
+  border-radius: var(--radius-10);
+  width: 180px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--Neutral-300);
+}
+
+.search-recipes {
+  width: 320px;
+  padding-left: 35px;
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  width: 15px;
+}
+
 .option-wrapper {
   display: flex;
   flex-direction: row;
@@ -99,7 +129,6 @@ picture img {
   }
 
   .healthy-recipes {
-    display: grid;
     grid-template-columns: 1fr;
   }
 
@@ -109,7 +138,16 @@ picture img {
 
   .select-time-option-wrapper {
     display: flex;
-    gap: 1rem;
+    gap: var(--spacing-150);
+    margin-top: var(--spacing-600);
+  }
+
+  select {
+    width: 320px;
+  }
+
+  .search-wrap {
+    margin-top: var(--spacing-150);
   }
 }
 
@@ -117,11 +155,11 @@ picture img {
 @media screen and (min-width: 48em) and (max-width: 75.99em) {
   .option-wrapper {
     display: flex;
-    justify-content: space-around;
+    max-width: 742px;
+    margin: auto;
   }
 
   .healthy-recipes {
-    display: grid;
     justify-items: center;
   }
 
@@ -138,7 +176,6 @@ picture img {
   }
 
   .healthy-recipes {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-400);
     align-items: stretch;
