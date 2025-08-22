@@ -1,6 +1,7 @@
 main {
   max-width: 1192px;
   margin: auto;
+  padding: 0rem var(--spacing-200);
 }
 
 .explore-our-simple-recipe > h2 {
@@ -116,6 +117,10 @@ picture img {
 
 /*Mobile breakpoint*/
 @media screen and (max-width: 47.99em) {
+  .explore-our-simple-recipe {
+    margin-top: var(--spacing-600);
+  }
+
   .option-wrapper {
     display: flex;
     flex-direction: column;
@@ -153,6 +158,11 @@ picture img {
 
 /* Tablet breakpoint */
 @media screen and (min-width: 48em) and (max-width: 75.99em) {
+  .explore-our-simple-recipe {
+    margin-top: var(--spacing-800);
+    margin-bottom: var(--spacing-600);
+  }
+
   .option-wrapper {
     display: flex;
     max-width: 742px;
