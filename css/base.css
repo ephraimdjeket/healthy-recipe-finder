@@ -82,7 +82,6 @@ img {
 header {
   position: sticky;
   top: 0;
-  overflow: hidden;
   z-index: 999;
   background-color: var(--Neutral-100);
 }
@@ -146,7 +145,7 @@ p {
 }
 
 #nav-links-wrapper {
-  top: 20px;
+  top: 73px;
   width: 100%;
   position: absolute;
   padding: var(--spacing-100);
@@ -270,7 +269,6 @@ footer > p {
 @media screen and (max-width: 47.99em) {
   /* Nav bar*/
   .nav-wrapper {
-    margin: 0 var(--spacing-200);
     height: 4.5rem;
   }
 
@@ -290,7 +288,6 @@ footer > p {
 /* Tablet breakpoint */
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
   .nav-wrapper {
-    margin: 0rem var(--spacing-400);
     height: 4.5rem;
   }
 
@@ -320,6 +317,9 @@ footer > p {
 
 /* Desktop breakpoint */
 @media screen and (min-width: 64em) {
+  header {
+    overflow: hidden;
+  }
   #hamburger-icon {
     display: none;
   }
