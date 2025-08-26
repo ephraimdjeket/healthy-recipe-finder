@@ -1,8 +1,8 @@
-body::before {
+.hero-media-wrapper::before {
   content: "";
   position: absolute;
-  bottom: -270px;
   width: 100%;
+  max-width: 1192px;
   height: 100%;
   background: url(../assets/images/pattern-squiggle-1.svg) no-repeat center /
     contain;
@@ -156,8 +156,8 @@ body::before {
 
 /* Tablet breakpoint */
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
-  body::before {
-    bottom: -180px;
+  .hero-media-wrapper::before {
+    top: 0;
   }
 
   .nav-wrapper {
@@ -209,8 +209,8 @@ body::before {
 
 /* Desktop breakpoint */
 @media screen and (min-width: 64em) {
-  body::before {
-    bottom: -120px;
+  .hero-media-wrapper::before {
+    top: 20px;
   }
   /* Hero container */
   .hero-container > a {
