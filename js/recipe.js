@@ -1,12 +1,15 @@
 const recipeContainer = document.getElementById("healthy-recipes-container");
+const loader = document.getElementById("loader");
 const url = "./js/data.json";
 
 async function loadRecipes() {
   try {
+    loader.classList.remove("hide");
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Something went wrong! Status code: ${res.status}`)
     const data = await res.json();
-    console.log(data)
+    loader.classList.add("hide");
+
 
     data.forEach(item => {
       const card = document.createElement("div");
@@ -44,9 +47,10 @@ async function loadRecipes() {
       thirdIconImg.src = "../assets/images/icon-cook-time.svg";
       thirdIconImg.alt = "cook time icon";
       thirdIconContainer.textContent = `Cook: ${item.cookMinutes} min`;
-      const recipeButton = document.createElement("button");
-      recipeButton.textContent = "View Recipe"
+      const recipeButton = document.createElement("a");
+      recipeButton.href = `details.html?id=${item.id}`;
       recipeButton.className = "view-recipe-btn";
+      recipeButton.textContent = "View Recipe";
 
 
       recipeImg.append(sourceLarge, sourceSmall, fallbackImg);
@@ -60,25 +64,12 @@ async function loadRecipes() {
     })
 
   } catch (err) {
+    loader.classList.add("hide");
 
+  } finally {
+    loader.classList.add("hide");
   }
+
 }
 
 loadRecipes();
-
-//  <div class="recipe-card">
-//         <picture>
-//           <source srcset="assets/images/mediterranean-chickpea-salad-large.webp" media="(min-width: 48em)" />
-//           <source srcset="assets/images/mediterranean-chickpea-salad-small.webp" media="(max-width: 47.99em)" />
-//           <img src="assets/images/mediterranean-chickpea-salad-small.webp" alt="Mediterranean chickpea salad">
-//         </picture>
-//         <h2>Mediterranean Chickpea Salad</h2>
-//         <p>A refreshing, protein-packed salad tossed in a lemon-olive oil dressing.</p>
-//         <div class="recipe-card-icons">
-//           <span><img src="assets/images/icon-servings.svg" alt="servings icon">Servings: 2</span>
-//           <span><img src="assets/images/icon-prep-time.svg" alt="prep icon">Prep: 10 mins</span>
-//           <div>
-//             <span class="cook-icon"><img src="assets/images/icon-cook-time.svg" alt="cook icon"> Cook: 0 min</span>
-//           </div>
-//         </div>
-//         <button class="view-recipe-btn">View Recipe</button>//       </div>
