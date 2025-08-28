@@ -325,7 +325,7 @@ footer > p {
     display: none;
   }
 
-  ul {
+  .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;
