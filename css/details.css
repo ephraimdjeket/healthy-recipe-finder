@@ -1,0 +1,19 @@
+picture img {
+  max-width: 580px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.recipe-detail-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-500);
+}
+
+.recipe-detail-info {
+  max-width: 572px;
+}
