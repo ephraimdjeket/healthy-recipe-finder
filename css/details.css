@@ -2,6 +2,21 @@ picture img {
   max-width: 580px;
 }
 
+.recipe-info {
+  margin: auto;
+  max-width: 1190px;
+  margin-top: var(--spacing-600);
+  margin-bottom: var(--spacing-200);
+}
+
+.recipe-detail-info > p {
+  margin: var(--spacing-250) 0rem;
+}
+
+#recipe-type {
+  font-weight: 700;
+}
+
 ul {
   display: flex;
   flex-direction: column;
