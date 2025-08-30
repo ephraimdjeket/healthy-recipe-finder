@@ -105,6 +105,14 @@ p {
   font-size: 1.25rem;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1192px;
+  margin: auto;
+}
+
 .active {
   border-bottom: 3px solid var(--Orange-500);
   border-radius: var(--radius-2);
@@ -288,7 +296,6 @@ footer > p {
 /* Tablet breakpoint */
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
   .nav-wrapper {
-    padding: 0rem 1rem;
     height: 4.5rem;
   }
 
@@ -313,6 +320,10 @@ footer > p {
     top: -40px;
     right: -60px;
     padding-right: 20px;
+  }
+
+  footer {
+    max-width: 768px;
   }
 }
 
@@ -381,5 +392,15 @@ footer > p {
     top: 50px;
     right: -60px;
     padding-right: 20px;
+  }
+}
+
+/* Mobile and Tablet view */
+@media screen and (min-width: 47.99em) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
   }
 }
