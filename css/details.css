@@ -2,7 +2,27 @@ picture img {
   max-width: 580px;
 }
 
-.recipe-info {
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: var(--spacing-100);
+  font-size: 1.25rem;
+}
+
+ul > li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+
+h3 {
+  font-size: var(--Text-present-4);
+  margin: var(--spacing-200) 0rem;
+}
+
+.recipe-info,
+.more-recipes-wrapper {
   margin: auto;
   max-width: 1190px;
   margin-top: var(--spacing-600);
@@ -17,12 +37,6 @@ picture img {
   font-weight: 700;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-
 .recipe-detail-container {
   display: flex;
   justify-content: center;
@@ -31,4 +45,115 @@ ul {
 
 .recipe-detail-info {
   max-width: 572px;
+}
+
+.detail-icon-wrapper,
+.detail-icon-wrapper > span {
+  display: flex;
+  align-items: center;
+}
+
+.detail-icon-wrapper {
+  gap: var(--spacing-200);
+  margin-bottom: var(--spacing-250);
+}
+
+.detail-icon-wrapper > span {
+  gap: var(--spacing-100);
+}
+
+/* More Recipes */
+.more-recipes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Recipe card styling */
+
+.more-recipes-wrapper > h3 {
+  font-size: var(--Text-present-3);
+  color: var(--Neutral-900);
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 376px;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
+  background-color: var(--Neutral-0);
+  padding: var(--spacing-100);
+}
+
+.recipe-card,
+picture img {
+  border-radius: var(--radius-10);
+}
+
+.recipe-card > h2 {
+  font-size: var(--Text-present-5);
+}
+
+.recipe-card-icons span,
+.cook-icon {
+  display: flex;
+}
+
+.recipe-card-icons {
+  display: flex;
+  gap: var(--spacing-200);
+}
+
+.view-recipe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  border: none;
+  color: white;
+  background-color: var(--Neutral-900);
+  cursor: pointer;
+  height: 48px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.recipe-card > picture img {
+  max-width: 376px;
+  display: block;
+  max-width: 100%;
+}
+
+.recipe-card-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* More recipe responsiveness */
+
+@media screen and (max-width: 64.125em) {
+  main {
+    padding: 0rem var(--spacing-400);
+  }
+  picture img {
+    max-width: 100%;
+  }
+
+  .recipe-detail-container {
+    flex-direction: column;
+    justify-self: center;
+  }
+
+  .recipe-card,
+  .recipe-card > img {
+    max-width: 768px;
+  }
+
+  .more-recipes {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
