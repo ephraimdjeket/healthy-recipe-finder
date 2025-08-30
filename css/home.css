@@ -161,7 +161,6 @@
   }
 
   .nav-wrapper {
-    margin: 0rem var(--spacing-400);
     height: 4.5rem;
   }
 
@@ -174,7 +173,8 @@
   .hero-title,
   .hero-p,
   .hero-btn,
-  .spacing-wrapper {
+  .spacing-wrapper,
+  footer {
     margin: 0rem 2rem;
   }
 
