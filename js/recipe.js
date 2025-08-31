@@ -14,7 +14,6 @@ async function loadRecipes() {
     data.forEach(item => {
       const card = document.createElement("div");
       card.className = "recipe-card";
-      console.log(card)
       const recipeImg = document.createElement("picture");
       const sourceLarge = document.createElement("source");
       sourceLarge.srcset = item.image.large;
@@ -60,7 +59,6 @@ async function loadRecipes() {
       recipeIcons.append(firstIconContainer, secondIconContainer)
       card.append(recipeImg, recipeTitle, recipeDesc, recipeIcons, thirdIconContainer, recipeButton);
       recipeContainer.appendChild(card)
-      console.log(card)
     })
 
   } catch (err) {
