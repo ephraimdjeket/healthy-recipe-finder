@@ -1,8 +1,10 @@
 .hero-media-wrapper::before {
   content: "";
   position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  max-width: 1192px;
   height: 100%;
   background: url(../assets/images/pattern-squiggle-1.svg) no-repeat center /
     contain;
@@ -10,6 +12,7 @@
 }
 
 .hero-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: var(--spacing-600);
@@ -123,6 +126,10 @@
     padding: 0rem 0.928rem;
   }
 
+  .hero-media-wrapper::before {
+    top: 190px;
+  }
+
   /* What you'll get */
 
   .what-youll-get {
@@ -156,10 +163,6 @@
 
 /* Tablet breakpoint */
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
-  .hero-media-wrapper::before {
-    top: 0;
-  }
-
   .nav-wrapper {
     height: 4.5rem;
   }
@@ -180,6 +183,10 @@
 
   .hero-media > img {
     padding: 0rem 2rem;
+  }
+
+  .hero-media-wrapper::before {
+    top: 100px;
   }
 
   .orange-background::before {
@@ -209,9 +216,6 @@
 
 /* Desktop breakpoint */
 @media screen and (min-width: 64em) {
-  .hero-media-wrapper::before {
-    top: 20px;
-  }
   /* Hero container */
   .hero-container > a {
     justify-self: start;
