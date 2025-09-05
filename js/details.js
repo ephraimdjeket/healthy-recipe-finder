@@ -1,5 +1,10 @@
+import { renderError } from "./utils/error.js";
+
+const mainContent = document.getElementById("main");
 const recipeDetailContainer = document.getElementById("recipe-detail");
 const recipeTypeText = document.getElementById("recipe-type");
+const loader = document.getElementById("loader");
+
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 
@@ -7,22 +12,28 @@ const url = "/js/data.json";
 
 async function loadData() {
   try {
+    loader.classList.remove("hide");
     const res = await fetch(url);
-    if (!res.ok) throw new Error(`Recipe not found`);
+    if (!res.ok) throw new Error(`${res.status} Recipe not found`);
+    loader.classList.add("hide");
     const recipeData = await res.json();
     const recipe = recipeData.find(item => item.id == recipeId);
     if (!recipe) {
-      return "error message"
+      renderError(mainContent, err);
     }
     renderRecipe(recipe);
   } catch (err) {
-
+    loader.classList.add("hide");
+    renderError(mainContent, err);
+  } finally {
+    loader.classList.add("hide");
   }
 }
 
 loadData();
 
 function renderRecipe(recipe) {
+
   /* Recipe type text */
   recipeTypeText.textContent = `${recipe.title}`
   /* Picture container */
@@ -47,6 +58,7 @@ function renderRecipe(recipe) {
   recipeDescription.textContent = `${recipe.overview}`;
   const recipeIconWrapper = document.createElement("div");
   recipeIconWrapper.classList.add("detail-icon-wrapper");
+
   /* Recipe icons */
   const firstIconContainer = document.createElement("span");
   const firstIcon = document.createElement("img");
@@ -57,12 +69,12 @@ function renderRecipe(recipe) {
   const secondIcon = document.createElement("img");
   secondIcon.src = "../assets/images/icon-prep-time.svg";
   secondIcon.alt = "prep icon";
-  firstIconContainer.append(secondIcon, `Prep: ${recipe.prepMinutes}`);
+  secondIconContainer.append(secondIcon, `Prep: ${recipe.prepMinutes}`);
   const thirdIconContainer = document.createElement("span");
   const thirdIcon = document.createElement("img");
   thirdIcon.src = "../assets/images/icon-cook-time.svg";
   thirdIcon.alt = "cook icon";
-  firstIconContainer.append(thirdIcon, `Cook: ${recipe.cookMinutes}`);
+  thirdIconContainer.append(thirdIcon, `Cook: ${recipe.cookMinutes}`);
 
   /* Ingridients ul */
 
