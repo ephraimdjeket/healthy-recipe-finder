@@ -2,7 +2,7 @@ picture img {
   max-width: 580px;
 }
 
-ul {
+.list-container {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -10,7 +10,7 @@ ul {
   font-size: 1.25rem;
 }
 
-ul > li {
+.list-container > li {
   display: flex;
   align-items: center;
   gap: var(--spacing-100);

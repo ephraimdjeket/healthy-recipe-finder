@@ -19,7 +19,7 @@ async function loadData() {
     const recipeData = await res.json();
     const recipe = recipeData.find(item => item.id == recipeId);
     if (!recipe) {
-      renderError(mainContent, err);
+      renderError(mainContent, "Recipe not found!");
     }
     renderRecipe(recipe);
   } catch (err) {
@@ -81,6 +81,7 @@ function renderRecipe(recipe) {
   const ingridientsTitle = document.createElement("h3");
   ingridientsTitle.textContent = "Ingridients:";
   const ingridientsListContainer = document.createElement("ul");
+  ingridientsListContainer.classList.add("list-container");
   recipe.ingredients.forEach(ingridient => {
     const li = document.createElement("li");
 
@@ -97,6 +98,7 @@ function renderRecipe(recipe) {
   const instructionsTitle = document.createElement("h3");
   instructionsTitle.textContent = "Instructions:";
   const instructionsListContainer = document.createElement("ul");
+  instructionsListContainer.classList.add("list-container");
   recipe.instructions.forEach(instruction => {
     const li = document.createElement("li");
 
