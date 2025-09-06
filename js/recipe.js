@@ -1,3 +1,6 @@
+import { renderError } from "./utils/error.js";
+
+const mainContent = document.getElementById("main");
 const recipeContainer = document.getElementById("healthy-recipes-container");
 const loader = document.getElementById("loader");
 const url = "./js/data.json";
@@ -30,19 +33,19 @@ async function loadRecipes() {
       recipeDesc.textContent = item.overview;
       const recipeIcons = document.createElement("div");
       recipeIcons.className = "recipe-card-icons";
-      firstIconContainer = document.createElement("span");
+      const firstIconContainer = document.createElement("span");
+      const firstIconImg = document.createElement("img");
       firstIconContainer.textContent = `Servings: ${item.servings}`;
-      firstIconImg = document.createElement("img");
       firstIconImg.src = "../assets/images/icon-servings.svg";
       firstIconImg.alt = "servings icon";
-      secondIconImg = document.createElement("img");
-      secondIconContainer = document.createElement("span");
+      const secondIconContainer = document.createElement("span");
+      const secondIconImg = document.createElement("img");
       secondIconContainer.textContent = `Prep: ${item.prepMinutes} min`;
       secondIconImg.src = "../assets/images/icon-prep-time.svg";
       secondIconImg.alt = "prep icon";
-      thirdIconContainer = document.createElement("span");
+      const thirdIconContainer = document.createElement("span");
+      const thirdIconImg = document.createElement("img");
       thirdIconContainer.className = "cook-icon";
-      thirdIconImg = document.createElement("img");
       thirdIconImg.src = "../assets/images/icon-cook-time.svg";
       thirdIconImg.alt = "cook time icon";
       thirdIconContainer.textContent = `Cook: ${item.cookMinutes} min`;
@@ -63,6 +66,7 @@ async function loadRecipes() {
 
   } catch (err) {
     loader.classList.add("hide");
+    renderError(mainContent, err)
 
   } finally {
     loader.classList.add("hide");
