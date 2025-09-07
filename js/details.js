@@ -1,8 +1,10 @@
 import { renderError } from "./utils/error.js";
+import { createRecipeCard } from "./utils/createRecipeCard.js";
 
 const mainContent = document.getElementById("main");
 const recipeDetailContainer = document.getElementById("recipe-detail");
 const recipeTypeText = document.getElementById("recipe-type");
+const moreRecipeContainer = document.getElementById("more-recipe-container");
 const loader = document.getElementById("loader");
 
 const params = new URLSearchParams(window.location.search);
@@ -18,6 +20,14 @@ async function loadData() {
     loader.classList.add("hide");
     const recipeData = await res.json();
     const recipe = recipeData.find(item => item.id == recipeId);
+    const others = recipeData
+      .filter(item => item.id !== recipeId)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+    others.forEach(item => {
+      const card = createRecipeCard(item);
+      moreRecipeContainer.appendChild(card);
+    })
     if (!recipe) {
       renderError(mainContent, "Recipe not found!");
     }
@@ -116,4 +126,4 @@ function renderRecipe(recipe) {
   recipeIconWrapper.append(firstIconContainer, secondIconContainer, thirdIconContainer);
   recipeInfoContainer.append(recipeTitle, recipeDescription, recipeIconWrapper, ingridientsTitle, ingridientsListContainer, instructionsTitle, instructionsListContainer);
   recipeDetailContainer.append(picture, recipeInfoContainer);
-}
+};
