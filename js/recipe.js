@@ -1,17 +1,23 @@
 import { renderError } from "./utils/error.js";
 import { createRecipeCard } from "./utils/createRecipeCard.js";
+import { handleSearch } from "./utils/searchFunction.js";
 
+const maxPrepTime = document.getElementById("max-prep-time");
+const maxCookTime = document.getElementById("max-cook-time");
+const searchInput = document.getElementById("search-recipes");
 const mainContent = document.getElementById("main");
-const recipeContainer = document.getElementById("healthy-recipes-container");
+export const recipeContainer = document.getElementById("healthy-recipes-container");
 const loader = document.getElementById("loader");
 const url = "./js/data.json";
+
+export let data = [];
 
 async function loadRecipes() {
   try {
     loader.classList.remove("hide");
     const res = await fetch(url);
     if (!res.ok) throw new Error(`Something went wrong! Status code: ${res.status}`)
-    const data = await res.json();
+    data = await res.json();
     loader.classList.add("hide");
 
 
@@ -31,3 +37,18 @@ async function loadRecipes() {
 }
 
 loadRecipes();
+
+searchInput.addEventListener("input", handleSearch);
+
+
+maxPrepTime.addEventListener("change", () => {
+
+  let matches = data.filter(item => item.prepMinutes === maxPrepTime.value)
+
+  recipeContainer.innerHTML = "";
+
+  matches.forEach(recipe => {
+    recipeContainer.appendChild(createRecipeCard(recipe));
+  });
+});
+
