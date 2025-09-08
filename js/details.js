@@ -21,7 +21,7 @@ async function loadData() {
     const recipeData = await res.json();
     const recipe = recipeData.find(item => item.id == recipeId);
     const others = recipeData
-      .filter(item => item.id !== recipeId)
+      .filter(item => item.id != recipeId)
       .sort(() => Math.random() - 0.5)
       .slice(0, 3);
     others.forEach(item => {
