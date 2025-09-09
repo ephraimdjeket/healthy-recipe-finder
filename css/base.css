@@ -177,6 +177,10 @@ footer {
   background-color: var(--Neutral-300);
 }
 
+.healthy-recipe-logo {
+  padding-left: 1rem;
+}
+
 #hamburger-icon {
   display: flex;
   justify-content: center;
@@ -186,6 +190,7 @@ footer {
   cursor: pointer;
   border-radius: var(--radius-4);
   border: none;
+  padding-right: 1rem;
 }
 
 #nav-links-wrapper {
@@ -316,6 +321,10 @@ footer > p {
     height: 4.5rem;
   }
 
+  .nav-links {
+    padding: 0rem 1rem;
+  }
+
   .healthy-recipe-logo {
     width: 242px;
     height: 32px;
@@ -333,6 +342,10 @@ footer > p {
 @media screen and (min-width: 48em) and (max-width: 67.99em) {
   .nav-wrapper {
     height: 4.5rem;
+  }
+
+  .nav-links {
+    padding: 0rem 1rem;
   }
 
   .healthy-recipe-logo {
