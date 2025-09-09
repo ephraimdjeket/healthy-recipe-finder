@@ -64,7 +64,8 @@
   margin-bottom: var(--spacing-500);
 }
 
-.hero-media > img {
+.hero-media > img,
+.knife-cutting-lettus {
   border-radius: var(--radius-12);
 }
 
