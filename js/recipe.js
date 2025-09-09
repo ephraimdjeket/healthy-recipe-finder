@@ -43,7 +43,24 @@ searchInput.addEventListener("input", handleSearch);
 
 maxPrepTime.addEventListener("change", () => {
 
-  let matches = data.filter(item => item.prepMinutes === maxPrepTime.value)
+  const maxTime = parseInt(maxPrepTime.value);
+
+  const matches = !maxTime ? data : data.filter(item => item.prepMinutes <= maxTime);
+
+
+  recipeContainer.innerHTML = "";
+
+  matches.forEach(recipe => {
+    recipeContainer.appendChild(createRecipeCard(recipe));
+  });
+});
+
+maxCookTime.addEventListener("change", () => {
+
+  const maxTime = parseInt(maxCookTime.value);
+
+  const matches = !maxTime ? data : data.filter(item => item.cookMinutes <= maxTime);
+
 
   recipeContainer.innerHTML = "";
 
