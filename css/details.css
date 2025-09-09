@@ -155,5 +155,6 @@ picture img {
   .more-recipes {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: var(--spacing-200);
   }
 }
