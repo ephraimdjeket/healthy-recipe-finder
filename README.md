@@ -11,7 +11,7 @@
     </a>
     <span>&nbsp;|&nbsp;</span>
     <!-- Frontend Mentor Live solution -->
-    <a href="https://github.com/ephraimdjeket/Workit-landing-page" title="Check My Solution on Frontend Mentor">
+    <a href="https://github.com/ephraimdjeket/healthy-recipe-finder?tab=readme-ov-file" title="Check My Solution on Frontend Mentor">
       Solution
     </a>
     <span>&nbsp;|&nbsp;</span>
